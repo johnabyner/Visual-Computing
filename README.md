@@ -1,2 +1,2 @@
 # Visual-Computing
-meus estudos sobre computação visual
+my studies on visual computing
