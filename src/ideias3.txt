@@ -1,0 +1,46 @@
+--------------------------------------
+Rastreador de pessoas
+YOLO:
+
+Frame 1:
+Pessoa → box
+
+Frame 2:
+Pessoa → box
+
+Frame 3:
+Pessoa → box
+
+ByteTrack transforma isso em:
+
+Pessoa #1
+Pessoa #1
+Pessoa #1
+tracking
+IDs
+bounding boxes ao longo do tempo
+YOLO + ByteTrack
+diferença entre detection e tracking
+track_id
+persistência de objetos
+--------------------------------------
+Contador de pessoas por linha
+Agora faça aquele contador de verdade:
+                    CÂMERA
+
+        ┌─────────────────────────┐
+        │                         │
+        │       👤 #12             │
+        │                         │
+        │─────────────────────────│
+        │       LINHA             │
+        │─────────────────────────│
+        │                         │
+        │       👤 #7              │
+        │                         │
+        └─────────────────────────┘
+
+        Entraram: 12
+        Saíram:   8
+--------------------------------------
+--------------------------------------

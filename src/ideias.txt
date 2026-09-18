@@ -1,0 +1,87 @@
+# Faça um programa que abre sua webcam e coloca informações em cima do vídeo:
+# ┌──────────────────────────────────┐
+# │ FPS: 30                          │
+# │ RES: 1280x720                    │
+# │                                  │
+# │             ●                    │
+# │                                  │
+# │        ┌──────────┐              │
+# │        │          │              │
+# │        └──────────┘              │
+# │                                  │
+# │ Camera: ONLINE                   │
+# └──────────────────────────────────┘
+# cv2.VideoCapture
+# leitura de frames
+# cv2.imshow
+# cv2.waitKey
+# cv2.rectangle
+# cv2.putText
+# cv2.circle
+# resolução
+# FPS
+# BGR
+# coordenadas (x, y)
+--------------------------------------
+A câmera deve perceber quando alguma coisa se movimenta.
+┌──────────────────────┐
+│                      │
+│       ┌──────┐       │
+│       │ OBJETO│      │
+│       └──────┘       │
+│                      │
+│ Movimento detectado  │
+└──────────────────────┘
+frame atual
+     ↓
+comparar com frame anterior
+     ↓
+diferença
+     ↓
+threshold
+     ↓
+noise reduction
+     ↓
+contours
+     ↓
+bounding box
+
+grayscale
+absdiff
+threshold
+Gaussian Blur
+morphology
+contours
+boundingRect
+--------------------------------------
+Escolha uma cor e faça a câmera encontrar objetos daquela cor.
+             🔴
+              ↓
+       ┌────────────┐
+       │  OBJETO    │
+       └────────────┘
+       HSV
+cv2.cvtColor
+cv2.inRange
+máscaras
+contours
+bounding boxes
+área
+filtros para ignorar objetos pequenos
+
+--------------------------------------
+Pegue uma imagem ou webcam contendo:
+○     □     △     ▭
+CIRCLE
+SQUARE
+TRIANGLE
+RECTANGLE
+
+contours
+contourArea
+arcLength
+approxPolyDP
+bounding boxes
+geometria básica
+
+--------------------------------------

@@ -1,0 +1,64 @@
+--------------------------------------
+Scanner de texto
+Pegue uma imagem:
+
+┌───────────────────────────┐
+│                           │
+│   Nome: John Abyner       │
+│   CPF: 123.456.789-00     │
+│   Curso: Informática      │
+│                           │
+└───────────────────────────┘
+
+e transforme em:
+
+Nome: John Abyner
+CPF: 123.456.789-00
+Curso: Informática
+
+Você vai aprender:
+
+EasyOCR
+bounding boxes do texto
+confidence
+texto reconhecido
+preprocessing com OpenCV
+--------------------------------------
+--------------------------------------
+Agora faça:
+
+webcam
+   ↓
+EasyOCR
+   ↓
+texto detectado
+   ↓
+bounding box
+   ↓
+texto na tela
+
+Por exemplo:
+
+┌─────────────────────────────┐
+│                             │
+│  ┌───────────────────────┐  │
+│  │ OPENAI                │  │
+│  └───────────────────────┘  │
+│                             │
+└─────────────────────────────┘
+
+Isso vai te ensinar uma coisa muito importante:
+
+OCR não é só "chamar EasyOCR".
+
+Você vai precisar lidar com:
+
+resolução
+crop
+grayscale
+threshold
+iluminação
+blur
+tamanho do texto
+confidence
+--------------------------------------

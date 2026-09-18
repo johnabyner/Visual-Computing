@@ -1,0 +1,46 @@
+--------------------------------------
+Detector de objetos em vídeo
+
+Pegue um vídeo e faça:
+pessoa       92%
+carro        87%
+cachorro     94%
+com bounding boxes.
+
+Ultralytics
+modelo pré-treinado
+inferência
+classes
+confidence
+bounding boxes
+resultados do YOLO
+integração YOLO + OpenCV
+--------------------------------------
+Detector de objetos na webcam
+┌──────────────────────────┐
+│                          │
+│   ┌──────────────┐       │
+│   │ person 97%   │       │
+│   └──────────────┘       │
+│                          │
+│   ┌────────┐             │
+│   │ bottle │             │
+│   └────────┘             │
+│                          │
+└──────────────────────────┘
+--------------------------------------
+ontador de objetos
+"Quantas pessoas passaram pela porta?"
+                 câmera
+
+        ┌──────────────────┐
+        │                  │
+        │       👤         │
+        │                  │
+        ├──────────────────┤ ← linha
+        │                  │
+        │                  │
+        └──────────────────┘
+
+        Pessoas: 7
+--------------------------------------
