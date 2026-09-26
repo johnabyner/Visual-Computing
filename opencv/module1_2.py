@@ -9,8 +9,8 @@ colorRed = (0, 0, 255)
 def targetColor(name, mask, newPhoto, min_area=1000):
     #aplying the opening/closening for KILLING THE NOISES HAHAHA of the mask
     kernel = np.ones((5,5), np.uint8)
-    mask_clean = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
-    mask_clean = cv2.morphologyEx(mask_clean, cv2.MORPH_CLOSE, kernel)
+    mask_clean = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel) #kill little noises
+    mask_clean = cv2.morphologyEx(mask_clean, cv2.MORPH_CLOSE, kernel) #kill holes in the mask
     
     #calculing the contours for put the rectangle
     contours, _= cv2.findContours(mask_clean, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
