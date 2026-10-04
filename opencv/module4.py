@@ -1,6 +1,7 @@
-#webcam que detecta rostos e olhos
+#programa  que detecta rostos e olhos
 
 import cv2
+import numpy as np
 
 frontalFace_cascade = cv2.CascadeClassifier("./haarcascades/haarcascade_frontalface_alt.xml")
 eye_cascade = cv2.CascadeClassifier("./haarcascades/haarcascade_eye.xml")
@@ -36,13 +37,34 @@ def detectionInFace(frame):
         for (sx, sy, sw, sh) in smiles:
             cv2.rectangle(roi_mouth_color, (sx,sy), (sx+sw, sy+sh), (0,0,255), 2)
 
-        return frame
+    return frame
 
 def webcam():
+    myVideoSource = "./videos/omori.mp4"
+    # cap = cv2.VideoCapture(0)
+    if not cap.isOpened():
+        print("Error in open cam")
+        return
+
+    originalFPS = cap.get(cv2.CAP_PROP_FPS)
+    if originalFPS == 0 or np.isnan(originalFPS):
+        originalFPS = 30
+
+    while True:
+        ret, frame = cap.read()
+        if not ret:
+            print("error in process frame")
+            break
+
+        newFrame = detectionInFace(frame)
+        cv2.imshow("webcam", newFrame)
+
+        if cv2.waitKey(originalFPS) & 0xFF == ord("q"):
+            break
     return
 
-source = "./photos/mrrobot.jpeg"
-def photoTarget():
+mySource = "./photos/mrrobot.jpeg"
+def photoTarget(source):
     frame = cv2.imread(source)
 
     if frame is None:
@@ -61,4 +83,4 @@ def photoTarget():
             cv2.destroyAllWindows()
             break
 
-photoTarget()
+photoTarget(mySource)
